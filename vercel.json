@@ -6,12 +6,6 @@
   ],
   "routes": [
     { "src": "/api/.*", "dest": "backend/index.js" },
-    { "src": "/(.*)", "dest": "frontend/$1" }
-  ],
-  "env": {
-    "MYSQL_HOST": "85.192.41.149",
-    "MYSQL_USER": "test_usr",
-    "MYSQL_PASSWORD": "coeoas5j8O6xXtvJ",
-    "MYSQL_DATABASE": "test"
-  }
+    { "src": "/(.*)", "dest": "frontend/main.js" }
+  ]
 }
