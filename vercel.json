@@ -2,6 +2,16 @@
   "version": 2,
   "builds": [
     { "src": "frontend/**", "use": "@vercel/static" },
-    { "src": "backend/**", "use": "@vercel/node" }
+    { "src": "backend/index.js", "use": "@vercel/node" }
   ],
+  "routes": [
+    { "src": "/api/.*", "dest": "backend/index.js" },
+    { "src": "/(.*)", "dest": "frontend/$1" }
+  ],
+  "env": {
+    "MYSQL_HOST": "85.192.41.149",
+    "MYSQL_USER": "test_usr",
+    "MYSQL_PASSWORD": "coeoas5j8O6xXtvJ",
+    "MYSQL_DATABASE": "test"
+  }
 }
